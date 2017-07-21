@@ -8,4 +8,4 @@ set LFLAGS=libui\alpha3.1\windows_amd64\mingw_static\libui.a^
         -lmsimg32 -lcomdlg32 -ld2d1 -ldwrite -lole32 -loleaut32^
         -loleacc -luuid -mwindows
 
-call konanc src -library libui/libui -linkerOpts "%LFLAGS%" -o test
+call konanc src libui/kotlin -library libui/libui -linkerOpts "%LFLAGS%" -o test
