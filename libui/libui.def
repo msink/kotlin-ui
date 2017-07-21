@@ -1,0 +1,17 @@
+headers = ui.h
+headerFilter = ui.h
+
+compilerOpts = -I./alpha3.1/src -std=c99 -fPIC \
+    -Wall -W -Wno-unused-parameter -Wwrite-strings -Wmissing-field-initializers \
+    -pedantic -Wno-long-long -Wcovered-switch-default -Wdelete-non-virtual-dtor \
+    -DNDEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+
+linker = clang++
+
+linkerOpts = -fPIC -fvisibility-inlines-hidden \
+    -Wall -W -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers \
+    -pedantic -Wno-long-long -Wcovered-switch-default -Wnon-virtual-dtor -Wdelete-non-virtual-dtor \
+    -std=c++11 \
+    -DNDEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+
+
