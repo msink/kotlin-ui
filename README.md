@@ -119,10 +119,11 @@ Result - `test.exe` - when runned should draw small window with one button insid
 ## Debugging
 
 OK, but how to debug?
+
 Currently _Kotlin/Native_ have very limited debugging capabilites.
 Sure it will improve someday, but what to do now?
 
-There is a way. _Kotlin/Native_ itself is JVM program, written in _Kotlin/JVM_
+There is a way. _Kotlin/Native_ itself is JVM program, written in _Kotlin/JVM_ .
 But it also heavily use LLVM toolchain, and LLVM is native.
 How these two parts interact? And how compiler developers debug it?
 
@@ -130,10 +131,12 @@ Looking in _Kotlin/Native_ sources, one can find *JVM version of Interop*
 It is almost similar to native cinterop, but designed to work with "big" Kotlin.
 Using under the hood `sun.misc.Unsafe` and `ffi`.
 
-But this can be used by anyone, for debugging in familiar and powerful IDEA,
-and then just compile to native. Lets try.
+But this way anyone can develop debug in familiar and powerful IDEA,
+and then just compile to native!
 
-Quick and dirty, just copy jvm-citerop to our working directory:
+Lets try.
+
+First, uick and dirty, just copy jvm-citerop to our working directory:
 
     xcopy /E /I \src\kotlin-native\Interop\Runtime\src\jvm cinterop\jvm\
     xcopy /E /I \src\kotlin-native\Interop\Runtime\src\main cinterop\main\
@@ -226,4 +229,4 @@ OK, patch our copy of cinterop, quick and dirty again:
      val paramTypes = kFunction.parameters.map { getArgOrRetValCType(it.type) }
 ```
 
-Finally it shouls work, you can develop and debug in IDEA.
+Finally it should work, you can develop and debug in IDEA.
