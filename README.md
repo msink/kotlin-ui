@@ -11,7 +11,7 @@ can produce reasonably-sized self-contained programs for 64-bit versions
 of 3 major OSes - Windows/Linux/MacOS.
 (It also can produce binaries for embedded/mobile devices, but in this area not
 so ready because of performance issues. For modern desktops performance is not
-critial in most cases, and it is already usable.)
+critical in most cases, and it is already usable.)
 
 Lets explore how _Kotlin/Native_ can be used for producing small self-contained
 GUI applications.
@@ -29,7 +29,7 @@ Here it is - [libui](https://github.com/andlabs/libui)
 
 Assume we have Windows 7 64-bit, working environment is `c:\src`.
 
-Dowload and build _Kotlin/Native_ :
+Download and build _Kotlin/Native_ :
 
     cd \src
     git clone https://github.com/JetBrains/kotlin-native.git
