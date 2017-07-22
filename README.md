@@ -6,7 +6,7 @@ Kotiln-UI
 Just for fun, wanted to try new flavor of [Kotlin](https://kotlinlang.org)
 language - [Kotlin/Native](https://github.com/JetBrains/kotlin-native)
 
-_Kotlin/Native_ is under development, but as is - in technical previw stage -
+_Kotlin/Native_ is under development, but as is - in technical preview stage -
 can produce reasonably-sized self-contained programs for 64-bit versions
 of 3 major OSes - Windows/Linux/MacOS.
 (It also can produce binaries for embedded/mobile devices, but in this area not
@@ -27,9 +27,9 @@ Here it is - [libui](https://github.com/andlabs/libui)
 
 ## Preparations
 
-Assume we have Windows 7 64-bit, working environment is `c:\src'.
+Assume we have Windows 7 64-bit, working environment is `c:\src`.
 
-Dowload and build _Kotlin/Native:
+Dowload and build _Kotlin/Native_ :
 
     cd \src
     git clone https://github.com/JetBrains/kotlin-native.git
@@ -43,7 +43,7 @@ Working directory:
     mkdir kotlin-ui
     chdir kotlin-ui
 
-Now ne have two sibling directories: `\src\kotlin-native` and `\src\kotlin-ui`.
+Now we have two sibling directories: `\src\kotlin-native` and `\src\kotlin-ui`.
 
 ## Low-Level bindings
 
@@ -127,16 +127,16 @@ There is a way. _Kotlin/Native_ itself is JVM program, written in _Kotlin/JVM_ .
 But it also heavily use LLVM toolchain, and LLVM is native.
 How these two parts interact? And how compiler developers debug it?
 
-Looking in _Kotlin/Native_ sources, one can find *JVM version of Interop*
-It is almost similar to native cinterop, but designed to work with "big" Kotlin.
-Using under the hood `sun.misc.Unsafe` and `ffi`.
+Looking in _Kotlin/Native_ sources, one can find *JVM version of Interop* .
+It is almost similar to native cinterop, but designed to work with "big" Kotlin,
+using under the hood `sun.misc.Unsafe` and `ffi`.
 
-But this way anyone can develop debug in familiar and powerful IDEA,
+But this way anyone can develop and debug in familiar and powerful IDEA,
 and then just compile to native!
 
 Lets try.
 
-First, uick and dirty, just copy jvm-citerop to our working directory:
+First, quick and dirty, just copy jvm-citerop to our working directory:
 
     xcopy /E /I \src\kotlin-native\Interop\Runtime\src\jvm cinterop\jvm\
     xcopy /E /I \src\kotlin-native\Interop\Runtime\src\main cinterop\main\
@@ -190,7 +190,7 @@ rename libui-build build-native
 
 This "magic" was mostly copied from `kotlin-native\backend.native\llvm.def`
 
-But `citerop` dont like undocumented `-flavor` option, so I just patched kotlin
+But `citerop` don't like undocumented `-flavor` option, so I just patched kotlin
 sources, and rebuild. Yes, quick and dirty :)
 
 ```patch
