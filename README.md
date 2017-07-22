@@ -95,7 +95,7 @@ fun main(args: Array<String>) = ui.application {
     window.margined = true
 
     val button = ui.Button()
-    button.text = "Konan говорит: click me!"
+    button.text = "Konan ГЈГ®ГўГ®Г°ГЁГІ: click me!"
     button.onClick { println ("Hi Kotlin") }
     window.child = button
 
@@ -214,7 +214,7 @@ add native paths `libui/build-jvm/natives` and `cinterop`
 Trying to run - we get error, something like "ffi not loaded".
 OK, patch our copy of cinterop, quick and dirty again:
 
-```
+```patch
 --- "F:\src\kotlin-native\Interop\Runtime\src\jvm\kotlin\kotlinx\cinterop\JvmCallbacks.kt"
 +++ "F:\src\kotlin-ui\cinterop\jvm\JvmCallbacks.kt"
 @@ -201,7 +201,6 @@
