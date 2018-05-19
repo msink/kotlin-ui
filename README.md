@@ -1,6 +1,8 @@
 Kotiln-UI
 =========
 
+(this repository remains here for historical reasons, subsequent work will be in https://github.com/msink/kotlin-libui)
+
 ## Motivation
 
 Just for fun, wanted to try new flavor of [Kotlin](https://kotlinlang.org)
