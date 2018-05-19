@@ -1,7 +1,7 @@
 Kotiln-UI
 =========
 
-2018-05-19: this repository remains here for historical reasons, subsequent work will be in https://github.com/msink/kotlin-libui
+2018-05-19: this repository remains here for historical reasons, continued in https://github.com/msink/kotlin-libui
 
 ## Motivation
 
